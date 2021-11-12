@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('foods/', include('foods.urls')),  # url에 food/가 있으면 foods 디렉토리에 있는 urls.py로 가라는 의미
-    path('menus/', include('menus.urls'))
+    path('foods /', include('foods.urls')),  # url에 food/가 있으면 foods 디렉토리에 있는 urls.py로 가라는 의미
+    path('menus/', include('menus.urls')),
+    path('', include('menus.urls'))
 ]
