@@ -18,6 +18,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('index/', views.index),  # url에 index/가 있으면 views.py에 있는 index를 실행
-    path('menu/<str:food>/', views.food_detail)
+    path('menu/', views.index),  # url에 index/가 있으면 views.py에 있는 index를 실행
+    path('menu/<int:pk>/', views.food_detail)
 ]

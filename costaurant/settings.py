@@ -23,9 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ra@xos6p-o%*!4%=mw6*q0j836n##*@0p*)s6+9-cj7%t##uop'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True  # 디버그 모드
 
+# 배포할 때 사용할 주소를 적어서 해당 서버가 웹 사이트를 서비스할 수 있게 해준다.
 ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['.pythonanywhere.com']  # 호스트 : django 서비스를 제공하는 컴퓨터
 
 
 # Application definition
@@ -119,9 +121,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+
+# 웹에서 정적파일에 대한 URL을 할당할 때 사용할 최상위 URL
+# 실제로 존재하는 디렉토리가 아닌 URL을 만들기 위한 부분
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'foods', 'static')
-# ]
-#
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# 실제로 정적파일이 모아지는 경로
+# django 프로젝트에서 사용하는 모든 정적파일이 이 경로에 복사됨
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
