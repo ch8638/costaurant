@@ -121,7 +121,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-
 # 웹에서 정적파일에 대한 URL을 할당할 때 사용할 최상위 URL
 # 실제로 존재하는 디렉토리가 아닌 URL을 만들기 위한 부분
 STATIC_URL = '/static/'
